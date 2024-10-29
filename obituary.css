@@ -112,7 +112,7 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%; /* 确保宽度一致 */
-    max-width: 220px; /* 设置最大宽度为 220px */
+    max-width: none; /* 移除最大宽度限制 */
     box-sizing: border-box; /* 包含内边距和边框在宽度内 */
 }
 
@@ -130,6 +130,13 @@ header h1 {
 }
 
 /* 响应式设计 */
+@media (max-width: 599px) {
+    .remembrance-item {
+        padding: 15px; /* 调整内边距 */
+        margin: 10px 0; /* 增加上下边距 */
+    }
+}
+
 @media (min-width: 600px) {
     .remembrance-item {
         flex: 1 1 calc(50% - 40px); /* 在中等屏幕上每行兩列 */
@@ -143,7 +150,6 @@ header h1 {
         max-width: calc(25% - 40px);
     }
 }
-
 /* 致贈花籃部分样式 */
 #donate-flower {
     text-align: center; /* 内容居中对齐 */
