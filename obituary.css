@@ -83,7 +83,6 @@ header h1 {
 }
 
 /* 追思緬懷部分样式 */
-/* 追思緬懷部分样式 */
 #remembrance {
     text-align: center; /* 内容居中对齐 */
     margin: 24px auto; /* 上下边距和水平居中 */
@@ -99,9 +98,10 @@ header h1 {
 
 .remembrance-details {
     display: flex;
-    flex-direction: column; /* 在小屏幕上纵向排列 */
-    gap: 20px;
-    align-items: center; /* 内容水平居中对齐 */
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: center; /* 水平居中 */
+    gap: 20px; /* 增加项之间的间距 */
+    margin-top: 20px; /* 项上方间距 */
 }
 
 .remembrance-item {
@@ -112,7 +112,7 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%; /* 确保宽度一致 */
-    max-width: 600px; /* 设置最大宽度 */
+    max-width: 220px; /* 设置最大宽度为 220px */
     box-sizing: border-box; /* 包含内边距和边框在宽度内 */
 }
 
@@ -131,12 +131,6 @@ header h1 {
 
 /* 响应式设计 */
 @media (min-width: 600px) {
-    .remembrance-details {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
     .remembrance-item {
         flex: 1 1 calc(50% - 40px); /* 在中等屏幕上每行兩列 */
         max-width: calc(50% - 40px);
@@ -144,13 +138,9 @@ header h1 {
 }
 
 @media (min-width: 900px) {
-    .remembrance-details {
-        justify-content: flex-start; /* 保持所有元素在左側對齊 */
-    }
-    
     .remembrance-item {
-        flex: 1 1 calc(33.33% - 40px); /* 在大屏幕上每行三列 */
-        max-width: calc(33.33% - 40px);
+        flex: 1 1 calc(25% - 40px); /* 在大屏幕上每行四列 */
+        max-width: calc(25% - 40px);
     }
 }
 
